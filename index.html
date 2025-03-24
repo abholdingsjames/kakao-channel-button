@@ -4,18 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오톡 채널 추가</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #FEE500; /* 카카오 브랜드 색상으로 배경 변경 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 90%;
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            position: relative; /* ::before 요소를 위해 추가 */
+        }
+        
+        h1 {
+            color: #3C1E1E; /* 카카오 텍스트 컬러 */
+            margin-bottom: 0.8rem;
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #665555;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .kakao-button {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.8rem;
+            }
+            
+            h1 {
+                font-size: 1.4rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>저희 채널에 추가해주세요</h1>
+        <h1>친구추가하고 다양한 혜택을 받아보세요!</h1>
+        <p class="subtitle">카카오톡 채널에서 최신 소식과 특별 이벤트를 놓치지 마세요</p>
         <div class="kakao-button">
-            <div id="kakao-add-channel-button"></div>
+            <a href="https://pf.kakao.com/_bnLnn" target="_blank">
+                <img src="https://developers.kakao.com/assets/img/about/logos/channel/add_channel_button_medium.png" alt="카카오톡 채널 추가하기">
+            </a>
         </div>
     </div>
-
-    <!-- 카카오 JavaScript SDK 추가 -->
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html> 
